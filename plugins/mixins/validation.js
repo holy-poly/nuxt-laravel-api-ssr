@@ -1,18 +1,17 @@
-// Global authentication for user mixin
+// Global validation mixin
 import Vue from 'vue'
 import {mapGetters} from 'vuex'
 
-const User = {
+const Validation = {
   install(Vue, options) {
     Vue.mixin({
       computed: {
         ...mapGetters({
-          user: 'auth/user',
-          authenticated: 'auth/authenticated'
+          errors: 'validation/errors',
         })
       }
     })
   }
 }
 
-Vue.use(User)
+Vue.use(Validation)

@@ -36,10 +36,21 @@ module.exports = {
   ],
 
   /*
+  ** Middleware to load before mounting the App
+  */
+  router: {
+    middleware: [
+      'clearValidationErrors'
+    ]
+  },
+
+  /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    './plugins/mixins/user.js'
+    './plugins/mixins/user.js',
+    './plugins/mixins/validation.js',
+    './plugins/axios.js',
   ],
 
   /*

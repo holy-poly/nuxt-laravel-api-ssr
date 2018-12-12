@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  components: {
-
-  }
+  // Apply the nuxt auth module middleware
+  // to protect user from redirect to home
+  // middleware: ['auth']
 }
 </script>

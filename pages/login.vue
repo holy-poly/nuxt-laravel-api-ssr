@@ -5,12 +5,12 @@
       <div class="form-group">
         <label>Email address</label>
         <input v-model.trim="form.email" type="email" class="form-control" placeholder="Enter email" autofocus>
-        <small class="form-text text-danger">Email error description here.</small>
+        <small v-if="errors.email" class="form-text text-danger">{{ errors.email[0] }}</small>
       </div>
       <div class="form-group">
         <label>Password</label>
         <input v-model.trim="form.password" type="password" class="form-control" placeholder="Enter Password">
-        <small class="form-text text-danger">Password error description here.</small>
+        <small v-if="errors.password" class="form-text text-danger">{{ errors.password[0] }}</small>
       </div>
       <button type="submit" class="btn btn-primary btn-block">Login</button>
       <br>
@@ -21,6 +21,9 @@
 
 <script>
 export default {
+  middleware: [
+    'guest'
+  ],
   data() {
     return {
       form: {
@@ -36,8 +39,10 @@ export default {
         data: this.form
       })
 
-      // Redirect user to home
-      this.$router.push('/')
+      // Redirect user to authenticated page if user is authenticated or to profile page
+      this.$router.push({
+        path: this.$route.query.redirect || '/profile'
+      })
     }
   }
 }

@@ -1,3 +1,4 @@
+// Getters for auth and user
 export const getters = {
   // Authenticated getters
   authenticated(state) {

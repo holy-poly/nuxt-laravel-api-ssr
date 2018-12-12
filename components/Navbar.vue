@@ -31,7 +31,7 @@
       <template v-if="authenticated">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">{{ user.name }}</a>
+            <nuxt-link to="/profile" class="nav-link">{{ user.name }}</nuxt-link>
           </li>
           <li class="nav-item">
             <a @click.prevent="logout" class="nav-link" style="cursor: pointer;">Logout</a >
