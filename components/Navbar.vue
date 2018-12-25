@@ -12,8 +12,11 @@
         <li class="nav-item active">
           <nuxt-link to="/" class="nav-link">Home</nuxt-link>
         </li>
+        <li class="nav-item active">
+          <nuxt-link to="/topics" class="nav-link">Topics</nuxt-link>
+        </li>
         <li class="nav-item">
-          <nuxt-link to="/posts" class="nav-link">Posts</nuxt-link>
+          <nuxt-link to="/dashboard" class="nav-link">Create Topic</nuxt-link>
         </li>
       </ul>
 

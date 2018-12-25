@@ -5,7 +5,7 @@ export default function({ $axios, store, redirect }) {
       store.dispatch('validation/setErrors', error.response.data.errors)
 
       // then redirect user to login page
-      return redirect('/login')
+      // return redirect('/login')
     }
 
     // And reject the request using promise

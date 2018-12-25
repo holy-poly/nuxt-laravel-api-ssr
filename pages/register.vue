@@ -51,9 +51,9 @@ export default {
         }
       })
 
-      // Redirect user to authenticated page if user is authenticated or to profile page
+      // Redirect user to authenticated page if user is authenticated or to dashboard page
       this.$router.push({
-        path: this.$route.query.redirect || '/profile'
+        path: this.$route.query.redirect || '/dashboard'
       })
     }
   }
